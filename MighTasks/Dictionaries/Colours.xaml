@@ -31,5 +31,9 @@
     <!--Window-->
     <SolidColorBrush x:Key="WindowLight" Color="#FFFFFFFF" />
     <SolidColorBrush x:Key="WindowDark" Color="#FF121212" />
+    
+    <!--Sub Window-->
+    <SolidColorBrush x:Key="SubWindowLight" Color="#FFF6F6F6" />
+    <SolidColorBrush x:Key="SubWindowDark" Color="#FF474747" />
 
 </ResourceDictionary>
