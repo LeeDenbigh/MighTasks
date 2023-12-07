@@ -1,4 +1,35 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Colour theme: https://colorhunt.co/palette/164863427d9d9bbec8ddf2fd -->
     
+    <!--Dark Blue-->
+    <SolidColorBrush x:Key="AccentDark" Color="#FF164863" />
+    <!--Medium Blue-->
+    <SolidColorBrush x:Key="AccentMid" Color="#FF427D9D" />
+    <!--Grey-ish blue colour -->
+    <SolidColorBrush x:Key="AccentGrey" Color="#FF9BBEC8" />
+    <!--Light Blue-->
+    <SolidColorBrush x:Key="AccentLight" Color="#FFDDF2FD" />
+    
+    <!--*Light Theme*-->
+    
+    <!--Default Text-->
+    <SolidColorBrush x:Key="HeaderTextLight" Color="#FF171717" />
+    <SolidColorBrush x:Key="DefaultTextLight" Color="#FF474747" />
+    
+    <!--*Dark Theme*-->
+    <SolidColorBrush x:Key="HeaderTextDark" Color="#FFE6E6E6" />
+    <SolidColorBrush x:Key="DefaultTextDark" Color="#FFD2D2D2" />
+    
+    <!--Delete Colour-->
+    <SolidColorBrush x:Key="DeleteAccent" Color="#FFC7162B" />
+
+    <SolidColorBrush x:Key="OnAccent" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="OnLightAccent" Color="#FF313131" />
+    
+    <!--Window-->
+    <SolidColorBrush x:Key="WindowLight" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="WindowDark" Color="#FF121212" />
+
 </ResourceDictionary>
