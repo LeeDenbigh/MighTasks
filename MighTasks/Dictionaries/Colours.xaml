@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <!--Colour theme: https://colorhunt.co/palette/164863427d9d9bbec8ddf2fd -->
-    
+
     <!--Dark Blue-->
     <SolidColorBrush x:Key="AccentDark" Color="#FF164863" />
     <!--Medium Blue-->
@@ -11,35 +11,56 @@
     <SolidColorBrush x:Key="AccentGrey" Color="#FF9BBEC8" />
     <!--Light Blue-->
     <SolidColorBrush x:Key="AccentLight" Color="#FFDDF2FD" />
-    
+    <!--Faded Accent-->
+    <SolidColorBrush x:Key="AccentFaded" Color="#FF00627A" />
+
     <!--*Light Theme*-->
-    
+
+    <!--Button Faded-->
+    <SolidColorBrush x:Key="ButtonFadedLight" Color="#FFC5C5C5" />
+
     <!--Default Text-->
     <SolidColorBrush x:Key="HeaderTextLight" Color="#FF171717" />
     <SolidColorBrush x:Key="DefaultTextLight" Color="#FF474747" />
-    
+
     <!--*Dark Theme*-->
     <SolidColorBrush x:Key="HeaderTextDark" Color="#FFE6E6E6" />
     <SolidColorBrush x:Key="DefaultTextDark" Color="#FFD2D2D2" />
-    
+
     <!--Delete Colour-->
     <SolidColorBrush x:Key="DeleteAccent" Color="#FFC7162B" />
 
     <SolidColorBrush x:Key="OnAccent" Color="#FFFFFFFF" />
     <SolidColorBrush x:Key="OnLightAccent" Color="#FF313131" />
-    
+
     <!--Window-->
     <SolidColorBrush x:Key="WindowLight" Color="#FFFFFFFF" />
     <SolidColorBrush x:Key="WindowDark" Color="#FF121212" />
-    
+
     <!--Sub Window-->
     <SolidColorBrush x:Key="SubWindowLight" Color="#FFF6F6F6" />
     <SolidColorBrush x:Key="SubWindowDark" Color="#FF474747" />
-    
+
     <!--Task List Light-->
     <SolidColorBrush x:Key="TaskListBackgroundLight" Color="#FFECECEC" />
-    
+
     <!--Task Details Background-->
-    <SolidColorBrush x:Key="TaskDetailsWindowBackground" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="TaskDetailsWindowBackgroundLight" Color="#FFFFFFFF" />
+
+    <!--Edit Menu Background-->
+    <SolidColorBrush x:Key="EditMenuBackgroundLight" Color="#FFF6F6F6" />
+
+    <!--Search Box-->
+    <SolidColorBrush x:Key="TextBoxBackgroundLight" Color="#FFFFFFFF" />
+    
+    <!--Text box border-->
+    <SolidColorBrush x:Key="TextBoxBorderLight" Color="#FFC5C5C5" />
+
+    <SolidColorBrush x:Key="SearchButtonBackgroundTransparent" Color="Transparent" />
+
+    <SolidColorBrush x:Key="PlaceholderTextLight" Color="#FFC5C5C5" />
+
+
+
 
 </ResourceDictionary>

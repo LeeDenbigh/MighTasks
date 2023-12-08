@@ -13,6 +13,7 @@
                 <!--Icon Resources-->
                 <ResourceDictionary Source="/Dictionaries/Icons.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

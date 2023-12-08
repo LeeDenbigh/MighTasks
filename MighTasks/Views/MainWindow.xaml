@@ -5,27 +5,118 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MighTasks"
         mc:Ignorable="d"
-        Title="Migh Tasks" Height="832" Width="1280"
-        Background="{DynamicResource WindowLight}">
+        Title="Migh Tasks" Height="664" Width="1165"
+        Background="{DynamicResource WindowLight}"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="80" />
+            <ColumnDefinition Width="60" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        
+
         <!--Menu Background-->
         <Rectangle Fill="{DynamicResource AccentDark}" />
 
+        <!--The Main Menu-->
+        <StackPanel Orientation="Vertical" Margin="0 50 0 0">
+            <Button Style="{StaticResource NoHoverButton}">
+                <Viewbox Style="{StaticResource MenuIconViewBox}">
+                    <Path Data="{StaticResource ListIcon}" Fill="{DynamicResource OnAccent}" />
+                </Viewbox>
+            </Button>
+            <Button Style="{StaticResource NoHoverButton}">
+                <Viewbox Style="{StaticResource MenuIconViewBox}">
+                    <Path Data="{StaticResource TickIcon}" Fill="{DynamicResource OnAccent}" />
+                </Viewbox>
+            </Button>
+            <Button Style="{StaticResource NoHoverButton}">
+                <Viewbox Style="{StaticResource MenuIconViewBox}">
+                    <Path Data="{StaticResource StopWatchIcon}" Fill="{DynamicResource OnAccent}" />
+                </Viewbox>
+            </Button>
+        </StackPanel>
+
+        <!--Main Menu Settings Button-->
+        <Button Style="{StaticResource NoHoverButton}"
+                VerticalAlignment="Bottom">
+            <Viewbox Style="{StaticResource MenuIconViewBox}">
+                <Path Data="{StaticResource CogIcon}" Fill="{DynamicResource AccentFaded}" />
+            </Viewbox>
+        </Button>
+
         <Grid Grid.Column="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition x:Name="DetailsColumn" Width="434"/>
+                <ColumnDefinition x:Name="DetailsColumn" Width="340"/>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="140" x:Name="EditColumn" />
             </Grid.ColumnDefinitions>
-            
+
             <!--Task List Background-->
             <Rectangle Fill="{DynamicResource TaskListBackgroundLight}" />
-            
+
+            <!--Task List Grid-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="130"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <!--Task List Header-->
+                <Grid>
+                    <!--2 Rows-->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="38"/>
+                    </Grid.RowDefinitions>
+                    <!--Task List Title-->
+                    <TextBlock Text="Tasks"
+                               Foreground="{DynamicResource DefaultTextLight}"
+                               FontSize="23"
+                               FontWeight="Bold"
+                               VerticalAlignment="Center"
+                               Margin="20 0 0 0"
+                               Grid.Row="1"/>
+
+                    <!--Add Task Button-->
+                    <Button Style="{StaticResource AddTaskButton}"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Margin="0 0 20 0"
+                            Grid.Row="1">
+                        <Path Data="{StaticResource AddTaskIcon}" Fill="{DynamicResource OnAccent}" />
+                    </Button>
+
+                    <!--Search Box-->
+                    <TextBox x:Name="TaskSearchBox"
+                                Style="{StaticResource TaskListSearchBox}" 
+                             Grid.Row="2"
+                             Margin="20 0"
+                             FontSize="16"/>
+                    
+                    <!--Placeholder Textblock-->
+                    <Label Content="Search Tasks..."
+                           Foreground="{DynamicResource PlaceholderTextLight}"
+                           VerticalAlignment="Center"
+                           Grid.Row="2"
+                           FontSize="16"
+                           Margin="38 0"
+                           IsHitTestVisible="False"
+                           Visibility="{Binding Text.IsEmpty, ElementName=TaskSearchBox, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+                    <Button Style="{StaticResource SearchButton}"
+                            Grid.Row="2"
+                            HorizontalAlignment="Right"
+                            Margin="0 0 25 0">
+                        <Viewbox Style="{StaticResource MenuIconViewBox}">
+                            <Path Data="{StaticResource SearchIcon}" Fill="{StaticResource ButtonFadedLight}" />
+                        </Viewbox>
+                    </Button>
+                </Grid>
+
+
+            </Grid>
+
             <!--Task Details Background-->
             <Rectangle Fill="{DynamicResource TaskDetailsWindowBackgroundLight}"
                        Grid.Column="1"/>
