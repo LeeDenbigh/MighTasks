@@ -8,6 +8,30 @@
         Title="Migh Tasks" Height="832" Width="1280"
         Background="{DynamicResource WindowLight}">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
         
+        <!--Menu Background-->
+        <Rectangle Fill="{DynamicResource AccentDark}" />
+
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="DetailsColumn" Width="434"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="140" x:Name="EditColumn" />
+            </Grid.ColumnDefinitions>
+            
+            <!--Task List Background-->
+            <Rectangle Fill="{DynamicResource TaskListBackgroundLight}" />
+            
+            <!--Task Details Background-->
+            <Rectangle Fill="{DynamicResource TaskDetailsWindowBackgroundLight}"
+                       Grid.Column="1"/>
+
+            <Rectangle Fill="{DynamicResource EditMenuBackgroundLight}"
+                       Grid.Column="2"/>
+        </Grid>
     </Grid>
 </Window>

@@ -35,5 +35,11 @@
     <!--Sub Window-->
     <SolidColorBrush x:Key="SubWindowLight" Color="#FFF6F6F6" />
     <SolidColorBrush x:Key="SubWindowDark" Color="#FF474747" />
+    
+    <!--Task List Light-->
+    <SolidColorBrush x:Key="TaskListBackgroundLight" Color="#FFECECEC" />
+    
+    <!--Task Details Background-->
+    <SolidColorBrush x:Key="TaskDetailsWindowBackground" Color="#FFFFFFFF" />
 
 </ResourceDictionary>
