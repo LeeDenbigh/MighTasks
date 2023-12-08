@@ -69,6 +69,7 @@
         <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderLight}" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="Padding" Value="20 0 50 0" />
+        <Setter Property="Cursor" Value="IBeam" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TextBox">
@@ -91,5 +92,6 @@
         <Setter Property="Width" Value="30" />
         <Setter Property="Height" Value="30" />
         <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Cursor" Value="Hand" />
     </Style>
 </ResourceDictionary>

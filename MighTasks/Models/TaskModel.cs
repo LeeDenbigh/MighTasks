@@ -11,6 +11,7 @@ namespace MighTasks.Models
     /// </summary>
     public class TaskModel
     {
+        public int TaskId { get; set; }
         // Property to store the task title.
         /// <summary>
         /// Get or set the tasks title.
