@@ -13,14 +13,25 @@ namespace MighTasks.DataService
     public class TaskDataService
     {
         private readonly string _filePath;
+        private readonly string folderName = "Migh Tasks";
         private readonly string fileName = "tasks.json";
 
         public TaskDataService()
         {
+            // Get the path to the app data.
             string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            // Get the folder of the application in roaming.
             string appFolder = Path.Combine(appDataPath, folderName);
+            // Get the data folder inside the app.
+            string dataFolder = Path.Combine(appFolder, "data");
+
+            if (!Directory.Exists(dataFolder))
+            {
+                Directory.CreateDirectory(dataFolder);
+            }
+
             // Define the path to the json file.
-            _filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), fileName);
+            _filePath = Path.Combine(dataFolder, fileName);
 
             // Ensure the JSON file exists.
             InitialiseFile();
@@ -33,10 +44,10 @@ namespace MighTasks.DataService
             {
                 // If the file does not exist, create it with default content (e.g., an empty list)
                 File.WriteAllText(_filePath, JsonConvert.SerializeObject(new List<TaskModel>()));
-
-                // Debug
-                Process.Start(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)));
             }
+
+            // Debug
+            //Process.Start(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)));
         }
 
         public List<TaskModel> LoadTasks()

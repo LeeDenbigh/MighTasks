@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MighTasks.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace MighTasks
         public MainWindow()
         {
             InitializeComponent();
+
+            this.DataContext = new TasksViewModel();
         }
     }
 }

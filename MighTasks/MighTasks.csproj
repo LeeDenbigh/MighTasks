@@ -59,7 +59,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DataService\TaskDataService.cs" />
-    <Compile Include="Models\CategoryModel.cs" />
+    <Compile Include="Models\BadgeModel.cs" />
     <Compile Include="Models\TaskCheckListModel.cs" />
     <Compile Include="Models\TaskModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />

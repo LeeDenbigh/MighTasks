@@ -29,6 +29,8 @@
 
     <!--Delete Colour-->
     <SolidColorBrush x:Key="DeleteAccent" Color="#FFC7162B" />
+    <SolidColorBrush x:Key="EditAccent" Color="#FF9F9F9F" />
+    <SolidColorBrush x:Key="CompleteAccent" Color="#FF33C779" />
 
     <SolidColorBrush x:Key="OnAccent" Color="#FFFFFFFF" />
     <SolidColorBrush x:Key="OnLightAccent" Color="#FF313131" />
