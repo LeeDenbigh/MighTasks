@@ -17,6 +17,8 @@ namespace MighTasks.DataService
 
         public TaskDataService()
         {
+            string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string appFolder = Path.Combine(appDataPath, folderName);
             // Define the path to the json file.
             _filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), fileName);
 
