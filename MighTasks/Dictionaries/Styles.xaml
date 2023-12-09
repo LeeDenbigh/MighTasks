@@ -30,6 +30,90 @@
         </Setter>
     </Style>
     
+    <!--Delete Button-->
+    <Style x:Key="DeleteButton" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource DeleteAccent}"/>
+        <Setter Property="Foreground" Value="{DynamicResource OnAccent}"/>
+        <Setter Property="Padding" Value="40 5" />
+        <Setter Property="Margin" Value="0 0 20 0" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="3" Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <!-- Set to the same background as the normal state to remove hover effect -->
+                            <Setter Property="Background" Value="#FFA74646"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <!-- Optional: Change background for pressed state -->
+                            <Setter Property="Background" Value="#FFDA8989"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Edit Button-->
+    <Style x:Key="EditButton" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource EditAccent}"/>
+        <Setter Property="Foreground" Value="{DynamicResource OnAccent}"/>
+        <Setter Property="Padding" Value="40 5" />
+        <Setter Property="Margin" Value="0 0 20 0" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="3" Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <!-- Set to the same background as the normal state to remove hover effect -->
+                            <Setter Property="Background" Value="#FF868686"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <!-- Optional: Change background for pressed state -->
+                            <Setter Property="Background" Value="#FFBBBBBB"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Edit Button-->
+    <Style x:Key="CompleteButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource CompleteAccent}"/>
+        <Setter Property="Foreground" Value="{DynamicResource OnAccent}"/>
+        <Setter Property="Padding" Value="40 5" />
+        <Setter Property="Margin" Value="0 0 20 0" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="3" Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <!-- Set to the same background as the normal state to remove hover effect -->
+                            <Setter Property="Background" Value="#FF30A568"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <!-- Optional: Change background for pressed state -->
+                            <Setter Property="Background" Value="#FF6BCC99"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
     <!--Menu Icons View Box-->
     <Style x:Key="MenuIconViewBox" TargetType="Viewbox">
         <Setter Property="Width" Value="20" />
@@ -69,6 +153,7 @@
         <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderLight}" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="Padding" Value="20 0 50 0" />
+        <Setter Property="Cursor" Value="IBeam" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TextBox">
@@ -91,5 +176,6 @@
         <Setter Property="Width" Value="30" />
         <Setter Property="Height" Value="30" />
         <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Cursor" Value="Hand" />
     </Style>
 </ResourceDictionary>

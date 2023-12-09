@@ -29,6 +29,8 @@
 
     <!--Delete Colour-->
     <SolidColorBrush x:Key="DeleteAccent" Color="#FFC7162B" />
+    <SolidColorBrush x:Key="EditAccent" Color="#FF9F9F9F" />
+    <SolidColorBrush x:Key="CompleteAccent" Color="#FF33C779" />
 
     <SolidColorBrush x:Key="OnAccent" Color="#FFFFFFFF" />
     <SolidColorBrush x:Key="OnLightAccent" Color="#FF313131" />
@@ -59,6 +61,21 @@
     <SolidColorBrush x:Key="SearchButtonBackgroundTransparent" Color="Transparent" />
 
     <SolidColorBrush x:Key="PlaceholderTextLight" Color="#FFC5C5C5" />
+
+    <!--Category Colour-->
+    <SolidColorBrush x:Key="CategoryBadgeMeeting" Color="#FF7C4ABB" />
+    <SolidColorBrush x:Key="CategoryBadgeWork" Color="#FF4A86BB" />
+    <SolidColorBrush x:Key="CategoryBadgePersonal" Color="#FF9DD42C" />
+    <SolidColorBrush x:Key="CategoryBadgeHome" Color="#FF4ABB75" />
+    <SolidColorBrush x:Key="CategoryBadgeHealthFitness" Color="#FFBB6E4A" />
+    <SolidColorBrush x:Key="CategoryBadgeFinance" Color="#FFE4D318" />
+    <SolidColorBrush x:Key="CategoryBadgeShopping" Color="#FF61CAD8" />
+    <SolidColorBrush x:Key="CategoryBadgeSocialFamily" Color="#FF126356" />
+    <SolidColorBrush x:Key="CategoryBadgeHobbiesLeisure" Color="#FF1CE3E8" />
+    <SolidColorBrush x:Key="CategoryBadgeVolunteeringCommunity" Color="#FFBB834A" />
+    <SolidColorBrush x:Key="CategoryBadgeBirthdaysAnniversaries" Color="#FF9B4ABB" />
+    <SolidColorBrush x:Key="CategoryBadgeProjects" Color="#FFB71E5D" />
+    <SolidColorBrush x:Key="CategoryBadgeLongTermGoals" Color="#FF4ABBB8" />
 
 
 

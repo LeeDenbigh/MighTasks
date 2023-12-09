@@ -112,6 +112,7 @@
                             <Path Data="{StaticResource SearchIcon}" Fill="{StaticResource ButtonFadedLight}" />
                         </Viewbox>
                     </Button>
+                    
                 </Grid>
 
 
@@ -120,6 +121,101 @@
             <!--Task Details Background-->
             <Rectangle Fill="{DynamicResource TaskDetailsWindowBackgroundLight}"
                        Grid.Column="1"/>
+            
+            <!--Details Grid-->
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <!--Header Details-->
+                    <RowDefinition Height="250"/>
+                    <!--Body Deatis-->
+                    <RowDefinition/>
+                    <!--Footer Details-->
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                
+                <!--Header-->
+                <Grid Margin="20 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    
+                    <!--Importance Badge & Title-->
+                    <StackPanel Orientation="Horizontal"
+                                Grid.Row="1"
+                                VerticalAlignment="Center">
+                        <!--Badge-->
+                        <!--Title-->
+                        <TextBlock Text="Task Title"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="{DynamicResource DefaultTextLight}"/>
+
+                    </StackPanel>
+                    
+                    <!--Description-->
+                    <ScrollViewer VerticalScrollBarVisibility="Auto"
+                                  HorizontalScrollBarVisibility="Disabled"
+                                  Grid.Row="2"
+                                  Padding="0 0 20 0">
+
+                        <TextBlock Text="Lorem ipsum dolor sit amet consectetur. Duis blandit adipiscing massa felis. Nisl amet ac turpis diam blandit tortor auctor. Tristique in fringilla eget habitasse. Tristique tortor quam egestas consectetur est. Ipsum enim mauris sed nec donec quam turpis massa. Cras quisque quis nisl id."
+                                   TextWrapping="Wrap"
+                                   FontSize="16"
+                                   TextAlignment="Justify"
+                                   LineHeight="25"
+                                   Foreground="{DynamicResource DefaultTextLight}"/>
+                    </ScrollViewer>
+                    
+                    <!--Due date badge-->
+                    <TextBlock Background="{StaticResource AccentDark}"
+                               Text="Due: 10/12/2023 @ 00:00AM"
+                               Grid.Row="3"
+                               Width="Auto"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"
+                               Padding="10 5"
+                               Foreground="{StaticResource OnAccent}"/>
+                </Grid>
+                
+                <!--Task List-->
+                <Grid Grid.Row="1">
+                    <ListView BorderThickness="0"
+                              Background="Transparent">
+                        
+                    </ListView>
+                </Grid>
+                
+                <!--Action Buttons-->
+                
+                <!--Delete and Edit buttons-->
+                <StackPanel Orientation="Horizontal" 
+                            VerticalAlignment="Center"
+                            Grid.Row="2"
+                            Margin="20 0">
+                    <!--Delete Button-->
+                    <Button Content="Delete"
+                            Style="{StaticResource DeleteButton}">
+                        
+                    </Button>
+                    <!--Edit Button-->
+                    <Button Content="Edit"
+                            Style="{StaticResource EditButton}">
+
+                    </Button>
+                </StackPanel>
+                
+                <!--Complete Button-->
+                <Button Content="Complete"
+                        Style="{StaticResource CompleteButtonStyle}"
+                        Grid.Row="2"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right">
+                    
+                </Button>
+            </Grid>
 
             <Rectangle Fill="{DynamicResource EditMenuBackgroundLight}"
                        Grid.Column="2"/>

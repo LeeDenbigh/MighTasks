@@ -1,5 +1,4 @@
-﻿using MighTasks.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MighTasks
+namespace MighTasks.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for UC_TaskCategoryBadge.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UC_TaskCategoryBadge : UserControl
     {
-        public MainWindow()
+        public UC_TaskCategoryBadge()
         {
             InitializeComponent();
-
-            this.DataContext = new TasksViewModel();
         }
     }
 }

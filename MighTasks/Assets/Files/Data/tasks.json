@@ -1,0 +1,20 @@
+[
+  {
+    "TaskTitle": "Example Task Title",
+    "TaskCategory": {
+      "CategoryTitle": "Work",
+      "HexColour": "#"
+    },
+    "TaskDetails": "Example task description here.",
+    "TaskCompleteByDateTime": "2023-12-31T23:59:59", // Date in ISO 8601 format
+    "TaskStartDateTime": "2023-01-01T00:00:00", // Date in ISO 8601 format
+    "IsComplete": false,
+    "ProjectTimer": "PT1H30M", 
+    "TaskCheckList": [
+      {
+        
+      }
+    ],
+    "TaskState": "InProgress" // Or "Complete", etc.
+  }
+]
