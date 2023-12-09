@@ -57,7 +57,7 @@
             <!--Task List Grid-->
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="130"/>
+                    <RowDefinition Height="85"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
@@ -65,7 +65,6 @@
                 <Grid>
                     <!--2 Rows-->
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="20"/>
                         <RowDefinition/>
                         <RowDefinition Height="38"/>
                     </Grid.RowDefinitions>
@@ -76,15 +75,17 @@
                                FontWeight="Bold"
                                VerticalAlignment="Center"
                                Margin="20 0 0 0"
-                               Grid.Row="1"/>
+                               Grid.Row="0"/>
 
                     <!--Add Task Button-->
                     <Button Style="{StaticResource AddTaskButton}"
                             HorizontalAlignment="Right"
                             VerticalAlignment="Center"
                             Margin="0 0 20 0"
-                            Grid.Row="1">
-                        <Path Data="{StaticResource AddTaskIcon}" Fill="{DynamicResource OnAccent}" />
+                            Grid.Row="0">
+                        <Viewbox Width="16" Height="16">
+                            <Path Data="{StaticResource AddTaskIcon}" Fill="{DynamicResource OnAccent}" />
+                        </Viewbox>
                     </Button>
 
                     <!--Search Box-->
