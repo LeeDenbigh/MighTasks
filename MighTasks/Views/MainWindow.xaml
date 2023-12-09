@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MighTasks"
+        xmlns:vm="clr-namespace:MighTasks.ViewModels"
         mc:Ignorable="d"
         Title="Migh Tasks" Height="664" Width="1165"
         Background="{DynamicResource WindowLight}"
@@ -82,7 +83,11 @@
                             HorizontalAlignment="Right"
                             VerticalAlignment="Center"
                             Margin="0 0 20 0"
-                            Grid.Row="0">
+                            Grid.Row="0"
+                            Command="{Binding IOpenNewTaskWindow}">
+                        <Button.DataContext>
+                            <vm:MainWindowViewModel />
+                        </Button.DataContext>
                         <Viewbox Width="16" Height="16">
                             <Path Data="{StaticResource AddTaskIcon}" Fill="{DynamicResource OnAccent}" />
                         </Viewbox>

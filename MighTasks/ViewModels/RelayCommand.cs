@@ -7,13 +7,13 @@ using System.Windows.Input;
 
 namespace MighTasks.ViewModels
 {
-    public class RelayCommandViewModel
+    public class RelayCommand : ICommand
     {
         private readonly Action _execute;
         private readonly Func<bool> _canExecute;
 
         // Constructor that takes an Action to execute and an optional Func<bool> for canExecute
-        public RelayCommandViewModel(Action execute, Func<bool> canExecute = null)
+        public RelayCommand(Action execute, Func<bool> canExecute = null)
         {
             _execute = execute ?? throw new ArgumentNullException(nameof(execute));
             _canExecute = canExecute;
